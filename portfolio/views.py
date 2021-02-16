@@ -5,7 +5,7 @@ from .models import Project, Myskill, Contact
 
 def index(request):
 
-    projects = Project.objects
+    projects = Project.objects.all().order_by('-date')
     skills = Myskill.objects.all()
     n = skills.count()
     if n%2==0:
