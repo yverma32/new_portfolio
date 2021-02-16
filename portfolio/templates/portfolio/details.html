@@ -1,0 +1,96 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block body %}
+{% if details %}
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Portfoio Details</h2>
+        <ol>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li>Portfoio Details</li>
+        </ol>
+      </div>
+
+    </div>
+  </section><!-- End Breadcrumbs -->
+
+  <!-- ======= Portfolio Details Section ======= -->
+  <section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+
+      <div class="portfolio-details-container">
+        {% if details.homepage %}
+        <div class="portfolio-details-slider swiper-container">
+            <div class="swiper-wrapper align-items-center">
+
+              <div class="swiper-slide">
+                <img src="{{ details.homepage.url }}" alt="">
+              </div>
+              {% if details.screenshot1 %}
+              <div class="swiper-slide">
+                <img src="{{ details.screenshot1.url }}" alt="">
+              </div>
+              {% if details.screenshot2 %}
+              <div class="swiper-slide">
+                <img src="{{ details.screenshot2.url }}" alt="">
+              </div>
+              {% endif %}
+              {% endif %}
+              {% else %}
+              <div class="swiper-slide">
+                <img src="{% static 'portfolio/error.png' %}" alt="">
+              </div>
+              {% endif %}
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+
+
+        <!-- {% if details.homepage %}
+        <div class="owl-carousel portfolio-details-carousel">
+          <img src="{{ details.homepage.url }}" class="img-fluid" alt="">
+          {% if details.screenshot1 %}
+          <img src="{{ details.screenshot1.url }}" class="img-fluid" alt="">
+          {% if details.screenshot2 %}
+          <img src="{{ details.screenshot2.url }}" class="img-fluid" alt="">
+          {% endif %}
+          {% endif %}
+          {% else %}
+          <img src="{% static 'portfolio/error.png' %}" class="img-fluid" alt="">
+          {% endif %}
+        </div> -->
+
+        <div class="portfolio-info">
+          <h3>Project information</h3>
+          <ul>
+            <li><strong>Category</strong>: {{ details.Category }}</li>
+            <li><strong>Languages</strong>: {{ details.languages }}</li>
+            <li><strong>Project date</strong>: {{ details.date }}</li>
+            <li><strong>Project URL</strong>: <a href="{{ details.url }}">{{ details.url }}</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="portfolio-description">
+        <h2>{{ details.title }}</h2>
+        <p>{{ details.body }}</p>
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Details Section -->
+<hr>
+</main><!-- End #main -->
+
+{% endif %}
+
+{% endblock %}
+{% block script %}
+  <script src="{% static 'portfolio/index.js' %}"></script>
+{% endblock %}

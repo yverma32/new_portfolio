@@ -1,0 +1,313 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block body %}
+
+  <section id='home' class="header d-flex flex-column justify-content-center align-items-center">
+    <div class="header-container" data-aos='fade-in'>
+      <h1>Yash Verma</h1>
+      <p>I'm a <span class="typed" data-typed-items="Python Developer, Django Developer, Web Developer, Freelancer"></span></p>
+      <div class="social-links">
+        <a href="https://twitter.com/yverma32" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.facebook.com/yash.verma.5074" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/yash_crazyaf/?hl=en" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://github.com/yverma32" class="google-plus"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/yash-verma-bb979285/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <main id='main'>
+
+    <section id='about' class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <p>An IT graduate seeking opportunities to work in cooperative working and challenging environment to utilize my technical knowledge, enhance learning, enabling me to improve my abilities, develop my functionality and work more on my skills. Currently skilled as a Web Developer with Django, Python, PostgreSQL, HTML, CSS, Bootstrap, JavaScript.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="{% static 'portfolio/mypic.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Python Django Web Developer.</h3>
+            <p class="font-italic">
+              To be able to work in your organization as a Python Django Developer where I can fully utilize my skills in HTML, JavaScript, CSS, Python, Django.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> 22 Feb 1998</li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> www.yashverma.info</li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> +91 9990817783</li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> New Delhi, India</li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> 23</li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> Bachelor</li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email Id:</strong> yverma32@gmail.com</li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> Available</li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              <!-- Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
+              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores. -->
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>Representation of all my skills in a form of progress bar.</p>
+        </div>
+
+
+        <div class="row skills-content">
+          {% for skill in skills1 %}
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="progress">
+              <span class="skill">{{ skill.title }}<i class="val">{{ skill.value }}%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" style="width: {{ skill.value }}%" aria-valuenow="{{ skill.value }}" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          {% for skill in skills2 %}
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">{{ skill.title }}<i class="val">{{ skill.value }}%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" style="width: {{ skill.value }}%" aria-valuenow="{{ skill.value }}" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section><!-- End Skills Section -->
+
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Sumary</h3>
+            <div class="resume-item pb-0">
+              <h4>Yash Verma</h4>
+              <p><em>I am a self motivated software craftsman, quick learner, like to take challenges. My interested area is Data Structure, Algorithm , Web based software.</em></p>
+              <ul>
+                <li>New Delhi, India</li>
+                <li>(+91) 9990817783</li>
+                <li>yverma32@gmail.com</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>B.Tech in Information Technoloy</h4>
+              <h5>2016 - 2020</h5>
+              <p><em>Graphic Era University, Dehradun</em></p>
+              <p> Completed my Graduation in Information Technology.</p>
+            </div>
+            <!-- <div class="resume-item">
+              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
+              <h5>2010 - 2014</h5>
+              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+            </div> -->
+          </div>
+          <!-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Senior graphic design specialist</h4>
+              <h5>2019 - Present</h5>
+              <p><em>Experion, New York, NY </em></p>
+              <ul>
+                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
+                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
+                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
+                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Graphic design specialist</h4>
+              <h5>2017 - 2018</h5>
+              <p><em>Stepping Stone Advertising, New York, NY</em></p>
+              <ul>
+                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
+                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+              </ul>
+            </div>
+          </div> -->
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <!-- <p>Here are all the projects done by me from scratch which represents all my knowledge of my skills.</p> -->
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+          {% for project in projects.all %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{{ project.image.url }}" class="img-fluid" alt="image">
+              <div class="portfolio-links">
+                <a href="{% url 'details' project.id %}" title="More Details"><i class="bi bi-plus"></i></a>
+                <a href="{{ project.url }}" title='Github Link'><i class="bi bi-link"></i></a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Below are all the services I can provide as my expertize. To contact with any query you can fill the form below and I will be in your contact as soon as possible.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="icofont-computer"></i></div>
+            <h4 class="title"><a href="">Website Design</a></h4>
+            <p class="description">I can design or redesign a Professional Responsive Website or landing page for you.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
+            <h4 class="title"><a href="">Django Developer</a></h4>
+            <p class="description">I will be your Python Django Backend full stack developer.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="icofont-earth"></i></div>
+            <h4 class="title"><a href="">Bugs Fixing for all my skills</a></h4>
+            <p class="description">I will fix all the bugs or errors you are having in your website under all my skills.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="icofont-image"></i></div>
+            <h4 class="title"><a href="">Logo Designer</a></h4>
+            <p class="description">I can design a modern logo for your business.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="icofont-settings"></i></div>
+            <h4 class="title"><a href="">Amazon Campaign Manager</a></h4>
+            <p class="description">I can manage all you Amazon Campaigns with a productive response by my end.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="icofont-tasks-alt"></i></div>
+            <h4 class="title"><a href="">Amazon Seller Account Management</a></h4>
+            <p class="description">I can manage your whole amazon seller account from listing to campaigns and you just have to worry about the items to sell.</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row mt-1">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>IP Extension, New Delhi-110092</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>yverma32@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+91-9990817783</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="{% url 'thanks' %}" method="post" role="form" class="php-email-form">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <!-- Error or Successfull message -->
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main>
+
+
+
+{% endblock %}
+{% block script %}
+  <script src="{% static 'portfolio/index.js' %}"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+{% endblock %}
